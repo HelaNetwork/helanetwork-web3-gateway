@@ -1,0 +1,39 @@
+runtime_id: 000000000000000000000000000000000000000000000000324f850f9a308d98
+node_address: unix:/data/oasisdeploy/client-02/internal.sock
+enable_pruning: false
+pruning_step: 100000
+indexing_start: 0
+
+log:
+  level: debug
+  format: json
+
+cache:
+  block_size: 1024
+  metrics: false
+
+database:
+  host: "127.0.0.1"
+  port: 5432
+  db: "postgres"
+  user: "postgres"
+  password: "postgres"
+  dial_timeout: 5
+  read_timeout: 10
+  write_timeout: 5
+  max_open_conns: 0
+
+gateway:
+  chain_id: 818
+  http:
+    host: "localhost"
+    port: 8545
+  ws:
+    host: "localhost"
+    port: 8546
+  monitoring:
+    host: "" # Disabled.
+    port: 9999
+  method_limits:
+    get_logs_max_rounds: 100
+  oasis_rpcs: false
